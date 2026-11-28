@@ -48,20 +48,20 @@ windows是\，但是Linux是/ 如ls /home/.../
 相对路径以当前目录开始，倒退上一层，..代表上一层，.代表当前工作目录
 例子
 现在在 /home/nick/projects/app
-pwd                      # -> /home/nick/projects/app
+pwd                      # -> /home/nick/projects/app，打印当前所在目录
 绝对路径：从 / 一路写到底，在哪敲都一样
 cat /etc/nginx/nginx.conf
 相对路径：接着当前位置往下
 cat src/main.py           # -> /home/nick/projects/app/src/main.py
 .. 上一层
-cd ..                     # 现在在 /home/nick/projects
-cat logs/app.log          # -> /home/nick/projects/logs/app.log
+cd ..                     # 现在在 /home/nick/projects，切换目录
+cat logs/app.log          # -> /home/nick/projects/logs/app.log查看/拼接文件内容
 
 cd ../app                 # 回到 /home/nick/projects/app
 
 . 当前目录
 ./run.sh                  # 等价于 run.sh（但要可执行权限）
-cp ./a.txt /tmp/          # 明确「就是这个目录的 a.txt」
+cp ./a.txt /tmp/          # 明确「就是这个目录的 a.txt」复制文件或者目录
 注意：家目录可以直接用~，root是可以的
 # 指令
 ## cd:切换到特定目录
